@@ -9,6 +9,8 @@ out/
 build/
 dist/
 
+.cfignore
+
 # logs
 *.log
 npm-debug.log*
