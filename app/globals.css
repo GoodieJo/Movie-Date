@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFF9E6;
+  --card: #FFF3C4;
+  --primary: #F6C453;
+  --accent: #D4A017;
+  --secondary: #F0E6C8;
+  --foreground: #2C2C2C;
+  --dark-accent: #1F1F1F;
+  --success: #7DAA68;
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background-color: #FFF9E6;
+  color: #2C2C2C;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* react-day-picker custom styles */
+.rdp-root {
+  --rdp-accent-color: #D4A017;
+  --rdp-accent-background-color: #FFF3C4;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+.rdp-months { width: 100%; }
+.rdp-month { width: 100%; }
+.rdp-table { width: 100%; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FFF9E6; }
+::-webkit-scrollbar-thumb { background: #F0E6C8; border-radius: 3px; }
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink { animation: blink 1s ease-in-out infinite; }
+
+/* Polaroid 3D */
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 { transform: rotateY(180deg); }
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid #D4A017;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ticket hole punch */
+.hole-punch {
+  width: 20px;
+  height: 20px;
+  background: #FFF9E6;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
